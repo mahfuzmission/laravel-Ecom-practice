@@ -352,6 +352,7 @@
             </div>
 
             <div class="col-sm-9 padding-right">
+                <div class="features_items"><!--features_items-->
                 @yield('content')
             </div>
         </div>
@@ -431,7 +432,7 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="address">
-                        <img src="images/home/map.png" alt="" />
+                        <img src="{{URL::to('frontend/images/home/map.png')}}" alt="" />
                         <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
                     </div>
                 </div>
