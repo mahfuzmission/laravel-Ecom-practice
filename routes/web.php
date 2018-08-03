@@ -18,15 +18,20 @@ Route::get('/', function () {
 //Route::get('about','testController@about');
 
 // frontend controller
-Route::get('/new',function(){
-    return view('new');
-});
 Route::get('/','HomeController@index');
 
 
 
 
 //backend controller
+Route::get('/logout','SuperAdminController@logout');
 Route::get('/admin','AdminController@index');
 Route::get('/dashboard','AdminController@show_dashboard');
 Route::post('/admin-dashboard','AdminController@dashboard');
+
+
+//extra for practice api
+Route::get('/new',function(){
+    return view('check');
+});
+Route::get('/admin-api/{id}','AdminController@api');

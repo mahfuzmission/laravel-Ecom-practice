@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+session_start();
 
 class AdminController extends Controller
 {
@@ -35,6 +37,19 @@ class AdminController extends Controller
         else{
             Session::put('message','Email or Password Invalid');
             return Redirect::to('/admin');
+        }
+    }
+
+    public function api($key){
+        if($key=="1235") {
+            $arr = [
+                "name" => "Mission",
+                "age" => 25,
+                "gender" => "male"
+            ];
+            return json_encode($arr);
+        } else {
+            return 0;
         }
     }
 }
