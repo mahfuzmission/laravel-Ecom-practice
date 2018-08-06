@@ -38,6 +38,9 @@ class AdminController extends Controller
             Session::put('message','Email or Password Invalid');
             return Redirect::to('/admin');
         }
+
+//    $result['usersInfo']=$users = DB::table('tbl_admin')->get();
+//    return view('check',$result);
     }
 
     public function api($key){

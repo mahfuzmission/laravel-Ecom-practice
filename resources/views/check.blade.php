@@ -79,7 +79,10 @@
 
     <div class="content">
         <div class="title m-b-md">
-         New
+         New<br />
+            @foreach($usersInfo as $user)
+                {{ $user->admin_email }}
+            @endforeach
         </div>
     </div>
 </div>
