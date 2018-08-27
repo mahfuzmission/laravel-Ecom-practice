@@ -35,6 +35,10 @@ Route::post('/admin-dashboard','AdminController@dashboard');
 Route::get('/add-category','CategoryController@index');
 Route::get('/all-category','CategoryController@all_category');
 Route::post('/save-category','CategoryController@save_category');
+Route::get('/inactive_category/{category_id}','CategoryController@inactive_category');
+Route::get('/active_category/{category_id}','CategoryController@active_category');
+Route::get('/edit_category/{category_id}','CategoryController@edit_category');
+Route::post('/update_category/{category_id}','CategoryController@update_category');
 
 
 //extra for practice api
